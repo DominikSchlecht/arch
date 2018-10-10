@@ -40,8 +40,10 @@ mount /dev/sda2 /mnt/boot/
 ```
 
 ### Install arch-base
+```
 pacstrap /mnt base base-devel
 genfstab -pU /mnt >> /mnt/etc/fstab
+```
 
 ### Configure system
 ```
