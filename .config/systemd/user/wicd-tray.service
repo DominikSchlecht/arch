@@ -1,0 +1,6 @@
+[Unit]
+Description=WICD-Tray
+[Service]
+ExecStart=wicd-gtk -t
+[Install]
+WantedBy=default.target

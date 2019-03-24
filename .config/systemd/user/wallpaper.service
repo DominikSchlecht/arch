@@ -1,0 +1,6 @@
+[Unit]
+Description=Wallpaper-Changer
+[Service]
+ExecStart=feh --randomize --bg-fill /home/sn0b4ll/Pictures/Wallpaper
+[Install]
+WantedBy=default.target

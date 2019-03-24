@@ -1,0 +1,10 @@
+[Unit]
+Description=Compton
+After=xorg.target
+
+[Service]
+ExecStart=compton
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target

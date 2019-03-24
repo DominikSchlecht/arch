@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/sn0b4ll/Ablage/Notizen/FK-Runde'
+let g:netrw_dirhist_2='/home/sn0b4ll'
+let g:netrw_dirhist_3='/home/sn0b4ll/Ablage'
+let g:netrw_dirhist_4='/home/sn0b4ll/Ablage/Notizen'
+let g:netrw_dirhist_5='/home/sn0b4ll/Ablage/Notizen/TI'
+let g:netrw_dirhist_6='/home/sn0b4ll'
+let g:netrw_dirhist_7='/home/sn0b4ll/Ablage'
+let g:netrw_dirhist_8='/home/sn0b4ll/Ablage/Notizen'
+let g:netrw_dirhist_9='/home/sn0b4ll/Ablage/Notizen/Offsite'
