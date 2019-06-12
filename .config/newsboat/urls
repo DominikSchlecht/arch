@@ -1,4 +1,9 @@
-https://www.heise.de/security/rss/news-atom.xml
-https://rss.golem.de/rss.php?tp=sec&feed=ATOM1.0
-
-https://www.us-cert.gov/ncas/alerts.xml
+https://www.heise.de/security/rss/news-atom.xml security
+https://rss.golem.de/rss.php?tp=sec&feed=ATOM1.0 security
+https://rss.packetstormsecurity.com/files/ security
+https://rss.packetstormsecurity.com/news/ security
+https://www.us-cert.gov/ncas/alerts.xml security
+https://nvd.nist.gov/download/nvd-rss.xml security
+https://googleprojectzero.blogspot.com/feeds/posts/default?alt=rss security
+https://www.reddit.com/r/netsec/new.xml security
+"query:Security News:unread = \"yes\""
