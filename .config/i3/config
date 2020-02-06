@@ -78,8 +78,12 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "Notizen"
-set $ws10 "VDI"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "VDI"
+set $ws12 "Internet"
+set $ws13 "Tasks"
+set $ws14 "Signal/Slack"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -92,6 +96,10 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+v workspace $ws11
+bindsym $mod+i workspace $ws12
+bindsym $mod+t workspace $ws13
+bindsym $mod+s workspace $ws14
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -104,6 +112,18 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+v move container to workspace $ws11
+bindsym $mod+Shift+i move container to workspace $ws12
+bindsym $mod+Shift+t move container to workspace $ws13
+bindsym $mod+Shift+s move container to workspace $ws14
+
+# Bind applications to workspace
+assign [class="Signal"] $ws14
+assign [class="Slack"] $ws14
+assign [class="Firefox"] $ws12
+
+# Move workspace right
+bindsym $mod+m move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -160,19 +180,29 @@ client.urgent               $rd        $rd         $tx
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+# bar {
+#         status_command i3status
+# }
+
+for_window [class=".*"] border pixel 1
+
+# Gaps
+gaps inner 5
+smart_gaps on
+smart_borders on
 
 bindsym XF86AudioRaiseVolume exec "amixer -q set Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q set Master 5%- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 
-bindsym XF86MonBrightnessDown exec "xrandr --output eDP-1 --brightness 0.2"
-bindsym XF86MonBrightnessUp exec "xrandr --output eDP-1 --brightness 1"
+# bindsym XF86MonBrightnessDown exec "xrandr --output eDP-1 --brightness 0.2"
+# bindsym XF86MonBrightnessUp exec "xrandr --output eDP-1 --brightness 1"
 
-# exec_always systemctl --user start xscreensaver
-# exec_always systemctl --user start compton
-exec_always systemctl --user start wallpaper
+exec_always polybar easy
+exec_always systemctl --user start xscreensaver
+exec_always systemctl --user start compton
+# exec_always systemctl --user start wallpaper
 # exec_always systemctl --user start wicd-tray
 # exec xrandr --dpi 120
+exec_always slack
+exec_always signal-desktop
